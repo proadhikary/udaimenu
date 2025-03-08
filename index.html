@@ -1,42 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mess Menu</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        .active-tab { background-color: cyan !important; font-weight: bold; }
-        .progress-bar { transition: width 0.5s ease-in-out; }
-        .extra-messing { font-size: 0.85rem; font-style: italic; color: gray; text-align: right; }
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .active-tab {
+            background-color: #0d6efd !important;
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 25px;
+            /* ✅ Small but thick */
+            background: #dee2e6;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            /* ✅ Enables absolute positioning */
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            line-height: 25px;
+            /* ✅ Centers text vertically */
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            /* ✅ Ensures visibility */
+            text-align: center;
+            white-space: nowrap;
+            position: absolute;
+            /* ✅ Keeps text visible */
+            width: 100%;
+            /* ✅ Allows full visibility */
+        }
+
+        .meal-tabs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            border: none;
+            background: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
     </style>
 </head>
-<body onload="loadMenu()">
+
+<body onload="fetchMenuData()">
 
     <div class="container mt-4">
         <h2 class="text-center text-danger">UDAIGIRI MESS MENU</h2>
         <h4 class="text-center" id="currentDate"></h4>
-        
-        <div class="progress">
-            <div id="progressBar" class="progress-bar bg-info" role="progressbar" style="width: 0%;" 
-                aria-valuemin="0" aria-valuemax="100">
-                0 mins left
+
+        <!-- Progress Bar Container (with fixed height & visibility) -->
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar bg-info" role="progressbar" style="width: 0%;" aria-valuemin="0"
+                aria-valuemax="100">
+                Loading...
             </div>
         </div>
 
-        <div class="d-flex justify-content-center mt-3">
-            <button class="btn btn-light mx-2" onclick="changeDate(-1)">◀</button>
-            <button id="Breakfast" class="btn btn-outline-dark mx-1" onclick="loadMenu('Breakfast')">Breakfast</button>
-            <button id="Lunch" class="btn btn-outline-dark mx-1" onclick="loadMenu('Lunch')">Lunch</button>
-            <button id="Snacks" class="btn btn-outline-dark mx-1" onclick="loadMenu('Snacks')">Snacks</button>
-            <button id="Dinner" class="btn btn-outline-dark mx-1" onclick="loadMenu('Dinner')">Dinner</button>
-            <button class="btn btn-light mx-2" onclick="changeDate(1)">▶</button>
+        <div class="meal-tabs mt-3">
+            <button class="nav-btn" onclick="changeDate(-1)">◀</button>
+            <button id="Breakfast" class="btn btn-outline-dark" onclick="loadMenu('breakfast')">Breakfast</button>
+            <button id="Lunch" class="btn btn-outline-dark" onclick="loadMenu('lunch')">Lunch</button>
+            <button id="Snacks" class="btn btn-outline-dark" onclick="loadMenu('snacks')">Snacks</button>
+            <button id="Dinner" class="btn btn-outline-dark" onclick="loadMenu('dinner')">Dinner</button>
+            <button class="nav-btn" onclick="changeDate(1)">▶</button>
         </div>
 
         <table class="table table-bordered mt-3">
-            <thead>
+            <thead class="table-primary">
                 <tr>
                     <th>Type</th>
                     <th>Item</th>
@@ -47,20 +98,32 @@
 
         <p class="extra-messing"><strong>Extra messing:</strong> <span id="extraMessing"></span></p>
     </div>
-
     <script>
+        let menuData = {};
         let currentDate = new Date();
         const daysOfWeek = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-        
+
         const mealTimings = {
-            "Breakfast": [7, 30, 9, 30],
-            "Lunch": [12, 0, 14, 0],
-            "Snacks": [16, 30, 17, 30],
-            "Dinner": [19, 0, 21, 0]
+            "breakfast": [7, 30, 9, 30],
+            "lunch": [12, 0, 14, 0],
+            "snacks": [16, 30, 17, 30],
+            "dinner": [19, 0, 21, 0]
         };
 
+        function fetchMenuData() {
+            fetch('menu.json')
+                .then(response => response.json())
+                .then(data => {
+                    menuData = data;
+                    loadMenu();
+                    updateProgressBar();  // Update the progress bar initially
+                    setInterval(updateProgressBar, 1000); // Update progress bar every second
+                })
+                .catch(error => console.error("Error loading JSON:", error));
+        }
+
         function updateDateDisplay() {
-            document.getElementById("currentDate").innerText = 
+            document.getElementById("currentDate").innerText =
                 currentDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
         }
 
@@ -76,63 +139,90 @@
                 let endTime = new Date();
                 endTime.setHours(endH, endM, 0);
 
+                // If meal is ongoing
                 if (now >= startTime && now <= endTime) {
-                    let timeLeft = Math.round((endTime - now) / 60000);
-                    document.getElementById("progressBar").style.width = (timeLeft / 120) * 100 + "%";
-                    document.getElementById("progressBar").innerText = timeLeft + " mins left";
-                    return meal;
+                    return { meal, status: "ongoing", timeLeft: Math.round((endTime - now) / 60000) };
                 }
 
+                // If meal hasn't started yet, find the closest one
                 let timeDiff = startTime - now;
                 if (timeDiff > 0 && timeDiff < minDiff) {
                     minDiff = timeDiff;
-                    closestMeal = meal;
+                    closestMeal = { meal, status: "upcoming", timeLeft: Math.round(minDiff / 60000) };
                 }
             }
-            return closestMeal || "Breakfast"; // Default to next available meal
+
+            return closestMeal || { meal: "breakfast", status: "upcoming", timeLeft: 0 };
+        }
+
+        function formatTime(minutes) {
+            let hrs = Math.floor(minutes / 60);
+            let mins = minutes % 60;
+            return hrs > 0 ? `${hrs} hr ${mins} mins` : `${mins} mins`;
+        }
+
+        function updateProgressBar() {
+            let now = new Date();
+            let { meal, status, timeLeft } = getCurrentOrNextMeal();
+            let progressBar = document.getElementById("progressBar");
+
+            if (status === "ongoing") {
+                let [startH, startM, endH, endM] = mealTimings[meal];
+                let startTime = new Date();
+                startTime.setHours(startH, startM, 0);
+                let endTime = new Date();
+                endTime.setHours(endH, endM, 0);
+
+                let totalDuration = (endTime - startTime) / 60000;  // Total minutes
+                let elapsedTime = totalDuration - timeLeft;
+                let progress = (elapsedTime / totalDuration) * 100;
+
+                progressBar.style.width = `${progress}%`;
+                progressBar.innerText = `${formatTime(timeLeft)} left`;
+
+            } else if (status === "upcoming") {
+                progressBar.style.width = `100%`;  /* ✅ Always keep text fully visible */
+                progressBar.innerText = `Next meal (${meal}) in ${formatTime(timeLeft)}`;
+            }
         }
 
         function loadMenu(selectedMeal = null) {
             let currentDay = daysOfWeek[currentDate.getDay()];
-            let activeMeal = selectedMeal || getCurrentOrNextMeal();
+            let { meal: activeMeal } = getCurrentOrNextMeal();
+            activeMeal = selectedMeal || activeMeal;
+            let menuTable = document.getElementById("menuTable");
+            let extraMessingList = [];
 
-            fetch("https://raw.githubusercontent.com/proadhikary/udaimenu/refs/heads/main/menu.csv")
-                .then(response => response.text())
-                .then(csvData => {
-                    let data = Papa.parse(csvData.trim(), { header: true, skipEmptyLines: true }).data;
-                    let menuTable = document.getElementById("menuTable");
-                    let extraMessingList = [];
+            menuTable.innerHTML = "";
+            let mealData = menuData[activeMeal];
 
-                    menuTable.innerHTML = "";
-                    data.forEach(row => {
-                        if (row[currentDay] && row.time === activeMeal) {
-                            if (row.type.trim().toLowerCase() === "extra messing") {
-                                extraMessingList.push(row[currentDay]);
-                            } else {
-                                let tr = document.createElement("tr");
-                                tr.innerHTML = `<td>${row.type}</td><td>${row[currentDay]}</td>`;
-                                menuTable.appendChild(tr);
-                            }
-                        }
-                    });
+            if (mealData) {
+                Object.keys(mealData).forEach(type => {
+                    let item = mealData[type][currentDay] || "Not Available";
+                    if (type.toLowerCase() === "extra messing") {
+                        extraMessingList.push(item);
+                    } else {
+                        let tr = document.createElement("tr");
+                        tr.innerHTML = `<td>${type}</td><td>${item}</td>`;
+                        menuTable.appendChild(tr);
+                    }
+                });
+            }
 
-                    document.getElementById("extraMessing").innerText = extraMessingList.join(", ") || "None";
+            document.getElementById("extraMessing").innerText = extraMessingList.join(", ") || "None";
 
-                    document.querySelectorAll(".btn-outline-dark").forEach(btn => btn.classList.remove("active-tab"));
-                    document.getElementById(activeMeal).classList.add("active-tab");
-                })
-                .catch(error => console.error("Error loading CSV:", error));
+            document.querySelectorAll(".btn-outline-dark").forEach(btn => btn.classList.remove("active-tab"));
+            document.getElementById(activeMeal.charAt(0).toUpperCase() + activeMeal.slice(1)).classList.add("active-tab");
 
             updateDateDisplay();
+            updateProgressBar();
         }
 
         function changeDate(days) {
             currentDate.setDate(currentDate.getDate() + days);
             loadMenu();
         }
-
-        loadMenu();
     </script>
-
 </body>
+
 </html>
