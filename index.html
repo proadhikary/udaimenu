@@ -96,7 +96,7 @@
             let currentDay = daysOfWeek[currentDate.getDay()];
             let activeMeal = selectedMeal || getCurrentOrNextMeal();
 
-            fetch("menu.csv")
+            fetch("https://raw.githubusercontent.com/proadhikary/udaimenu/refs/heads/main/menu.csv")
                 .then(response => response.text())
                 .then(csvData => {
                     let data = Papa.parse(csvData.trim(), { header: true, skipEmptyLines: true }).data;
