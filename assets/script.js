@@ -38,17 +38,27 @@ function getCurrentOrNextMeal() {
         let endTime = new Date();
         endTime.setHours(endH, endM, 0);
 
-        // If meal is ongoing
+        // ✅ Meal is currently happening → Show time left
         if (now >= startTime && now <= endTime) {
             return { meal, status: "ongoing", timeLeft: Math.round((endTime - now) / 60000) };
         }
 
-        // If meal hasn't started yet, find the closest one
+        // ✅ Find the next meal after the current time
         let timeDiff = startTime - now;
         if (timeDiff > 0 && timeDiff < minDiff) {
             minDiff = timeDiff;
             closestMeal = { meal, status: "upcoming", timeLeft: Math.round(minDiff / 60000) };
         }
+    }
+
+    // ✅ Special Case: After Dinner (Past 9 PM → Before 12 AM)
+    if (now.getHours() >= 21) {
+        let nextBreakfast = new Date();
+        nextBreakfast.setDate(now.getDate() + 1); // Move to next day
+        nextBreakfast.setHours(mealTimings["breakfast"][0], mealTimings["breakfast"][1], 0); // Set to breakfast time
+
+        let timeLeft = Math.round((nextBreakfast - now) / 60000); // Convert to minutes
+        return { meal: "breakfast", status: "upcoming", timeLeft };
     }
 
     return closestMeal || { meal: "breakfast", status: "upcoming", timeLeft: 0 };
