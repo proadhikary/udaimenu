@@ -87,7 +87,7 @@ function updateProgressBar() {
         let progress = (elapsedTime / totalDuration) * 100;
 
         progressBar.style.width = `${progress}%`;
-        progressBar.innerText = `${formatTime(timeLeft)} left`;
+        progressBar.innerText = `${meal} ends in ${formatTime(timeLeft)}`;
 
     } else if (status === "upcoming") {
         progressBar.style.width = `100%`;  /* ✅ Always keep text fully visible */
