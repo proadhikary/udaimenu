@@ -151,7 +151,7 @@
             "sunday": ""
         },
         "Dal": {
-            "monday": "DAL PUNJABI",
+            "monday": "DAL",
             "tuesday": "AMRITSARI CHOLEY",
             "wednesday": "MIX DAL LIGHT",
             "thursday": "DAL MAKHANI",
@@ -160,7 +160,7 @@
             "sunday": ""
         },
         "Vegetable": {
-            "monday": "KADHAI PANEER/EGG CURRY",
+            "monday": "KADHAI PANEER",
             "tuesday": "KADDU MASALA/ALOO TAMATAR",
             "wednesday": "PANEER BUTTER MASALA/ CHICKEN CURRY",
             "thursday": "MALAI KOFTA",
@@ -169,7 +169,7 @@
             "sunday": ""
         },
         "Salad/Soup": {
-            "monday": "GREEN SALAD",
+            "monday": "Dahi Phulke, GREEN SALAD",
             "tuesday": "GREEN SALAD",
             "wednesday": "GREEN SALAD",
             "thursday": "GREEN SALAD",
@@ -178,7 +178,7 @@
             "sunday": ""
         },
         "Desserts": {
-            "monday": "FRUIT CUSTARD",
+            "monday": "Dawat-e-sher, Thandai-e-mohabbat",
             "tuesday": "KHEER",
             "wednesday": "PASTRY",
             "thursday": "GULAB JAMUN WITH ICE CREAM",
