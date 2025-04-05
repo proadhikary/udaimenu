@@ -138,8 +138,8 @@
             "wednesday": "PLAIN RICE",
             "thursday": "PLAIN RICE",
             "friday": "SOYA RICE",
-            "saturday": "VEG + EGG BIRYANI",
-            "sunday": "BHM Night ~ Nalanda"
+            "saturday": "Masala Bhat",
+            "sunday": "VEG BIRYANI"
         },
         "Roti": {
             "monday": "CHAPPATI",
@@ -147,7 +147,7 @@
             "wednesday": "CHAPPATI",
             "thursday": "CHAPPATI",
             "friday": "CHAPPATI",
-            "saturday": "",
+            "saturday": "Roti, Pav",
             "sunday": ""
         },
         "Dal": {
@@ -156,7 +156,7 @@
             "wednesday": "MIX DAL LIGHT",
             "thursday": "DAL MAKHANI",
             "friday": "MOONG MASOOR DAL",
-            "saturday": "",
+            "saturday": "Maharashtrian dal",
             "sunday": ""
         },
         "Vegetable": {
@@ -165,7 +165,7 @@
             "wednesday": "PANEER BUTTER MASALA/ CHICKEN CURRY",
             "thursday": "MALAI KOFTA",
             "friday": "NAVRATNA KORMA",
-            "saturday": "Aloo-Chola Curry",
+            "saturday": "Bhaji, Spring Roll",
             "sunday": ""
         },
         "Salad/Soup": {
@@ -174,7 +174,7 @@
             "wednesday": "GREEN SALAD",
             "thursday": "GREEN SALAD",
             "friday": "GREEN SALAD",
-            "saturday": "GREEN SALAD",
+            "saturday": "GREEN SALAD, Boondi raita",
             "sunday": ""
         },
         "Desserts": {
@@ -183,7 +183,7 @@
             "wednesday": "PASTRY",
             "thursday": "GULAB JAMUN WITH ICE CREAM",
             "friday": "CHHENA TOAST/ KESAR BARFI",
-            "saturday": "NONE",
+            "saturday": "Chenna Payes",
             "sunday": ""
         }
     }
