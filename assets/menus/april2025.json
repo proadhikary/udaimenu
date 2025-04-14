@@ -138,8 +138,8 @@
             "wednesday": "PLAIN RICE",
             "thursday": "PLAIN RICE",
             "friday": "SOYA RICE",
-            "saturday": "Masala Bhat",
-            "sunday": "VEG BIRYANI"
+            "saturday": "VEG + EGG BIRYANI",
+            "sunday": "VEG + EGG/ CHICKEN BIRYANI"
         },
         "Roti": {
             "monday": "CHAPPATI",
@@ -147,44 +147,44 @@
             "wednesday": "CHAPPATI",
             "thursday": "CHAPPATI",
             "friday": "CHAPPATI",
-            "saturday": "Roti, Pav",
-            "sunday": ""
+            "saturday": "",
+            "sunday": "CHAPPATI"
         },
         "Dal": {
-            "monday": "DAL",
+            "monday": "DAL PUNJABI",
             "tuesday": "AMRITSARI CHOLEY",
             "wednesday": "MIX DAL LIGHT",
             "thursday": "DAL MAKHANI",
             "friday": "MOONG MASOOR DAL",
-            "saturday": "Maharashtrian dal",
-            "sunday": ""
+            "saturday": "",
+            "sunday": "TOMATO PYAAZ RAITA"
         },
         "Vegetable": {
-            "monday": "KADHAI PANEER",
+            "monday": "KADHAI PANEER/EGG CURRY",
             "tuesday": "KADDU MASALA/ALOO TAMATAR",
             "wednesday": "PANEER BUTTER MASALA/ CHICKEN CURRY",
             "thursday": "MALAI KOFTA",
             "friday": "NAVRATNA KORMA",
-            "saturday": "Bhaji, Spring Roll",
-            "sunday": ""
+            "saturday": "Aloo-Chola Curry",
+            "sunday": "KALACHANA MASALA"
         },
         "Salad/Soup": {
-            "monday": "Dahi Phulke, GREEN SALAD",
+            "monday": "GREEN SALAD",
             "tuesday": "GREEN SALAD",
             "wednesday": "GREEN SALAD",
             "thursday": "GREEN SALAD",
             "friday": "GREEN SALAD",
-            "saturday": "GREEN SALAD, Boondi raita",
-            "sunday": ""
+            "saturday": "GREEN SALAD",
+            "sunday": "GREEN SALAD"
         },
         "Desserts": {
-            "monday": "Dawat-e-sher, Thandai-e-mohabbat",
+            "monday": "FRUIT CUSTARD",
             "tuesday": "KHEER",
             "wednesday": "PASTRY",
             "thursday": "GULAB JAMUN WITH ICE CREAM",
             "friday": "CHHENA TOAST/ KESAR BARFI",
-            "saturday": "Chenna Payes",
-            "sunday": ""
+            "saturday": "NONE",
+            "sunday": "MILK CAKE"
         }
     }
 }
