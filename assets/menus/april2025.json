@@ -156,7 +156,7 @@
             "wednesday": "MIX DAL LIGHT",
             "thursday": "DAL MAKHANI",
             "friday": "MOONG MASOOR DAL",
-            "saturday": "Dal Makhani",
+            "saturday": "Dal Malka",
             "sunday": "TOMATO PYAAZ RAITA"
         },
         "Vegetable": {
@@ -165,7 +165,7 @@
             "wednesday": "PANEER BUTTER MASALA/ CHICKEN CURRY",
             "thursday": "MALAI KOFTA",
             "friday": "NAVRATNA KORMA",
-            "saturday": "Fried Corn, Aloo Shimla",
+            "saturday": "Dum Aloo",
             "sunday": "KALACHANA MASALA"
         },
         "Salad/Soup": {
@@ -174,7 +174,7 @@
             "wednesday": "GREEN SALAD",
             "thursday": "GREEN SALAD",
             "friday": "GREEN SALAD",
-            "saturday": "Green Salad",
+            "saturday": "GREEN SALAD",
             "sunday": "GREEN SALAD"
         },
         "Desserts": {
@@ -183,7 +183,7 @@
             "wednesday": "PASTRY",
             "thursday": "GULAB JAMUN WITH ICE CREAM",
             "friday": "CHHENA TOAST/ KESAR BARFI",
-            "saturday": "Rasmalai",
+            "saturday": "-",
             "sunday": "MILK CAKE"
         }
     }
