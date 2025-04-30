@@ -1,0 +1,190 @@
+{
+    "breakfast": {
+        "Mains": {
+            "monday": "SANDWICH, POHA & SEV, DAHI, JALEBI, MASALA OATS",
+            "tuesday": "MASALA CORN, BESAN CHILA, NAMKEEN SEWAIYAN",
+            "wednesday": "VADA/IDLI, SAMBHAR WITH 2 CHUTNEY: COCONUT & TOMATO, KALA CHANA",
+            "thursday": "PANEER PARATHA, PICKLE WITH CHUTNEY & DAHI, CORNFLAKES",
+            "friday": "VADA PAV WITH CHUTNEY, OMLETTE, SUJI KA HALWA",
+            "saturday": "ALOO PYAAZ PARATHA, PICKLE WITH MINT CHUTNEY & DAHI, CORNFLAKES",
+            "sunday": "DOSA, SAMBHAR WITH 2 CHUTNEY: COCONUT & TOMATO, BOILED EGGS"
+        },
+        "Breads": {
+            "monday": "WHITE & BROWN BREAD, BUTTER & JAM, TOMATO SAUCE",
+            "tuesday": "WHITE & BROWN BREAD, BUTTER & JAM, TOMATO SAUCE",
+            "wednesday": "WHITE & BROWN BREAD, BUTTER & JAM, TOMATO SAUCE",
+            "thursday": "WHITE & BROWN BREAD, BUTTER & JAM, TOMATO SAUCE",
+            "friday": "WHITE & BROWN BREAD, BUTTER & JAM, TOMATO SAUCE",
+            "saturday": "WHITE & BROWN BREAD, BUTTER & JAM, TOMATO SAUCE",
+            "sunday": "WHITE & BROWN BREAD, BUTTER & JAM, TOMATO SAUCE"
+        },
+        "Beverages": {
+            "monday": "TEA/ COFFEE/ MILK WITH BOURNVITA",
+            "tuesday": "TEA/ COFFEE/ MILK WITH BOURNVITA",
+            "wednesday": "TEA/ COFFEE/ MILK WITH BOURNVITA",
+            "thursday": "TEA/ COFFEE/ MILK WITH BOURNVITA",
+            "friday": "TEA/ COFFEE/ MILK WITH BOURNVITA",
+            "saturday": "TEA/ COFFEE/ MILK WITH BOURNVITA",
+            "sunday": "TEA/ COFFEE/ MILK WITH BOURNVITA"
+        },
+        "Healthy Options": {
+            "monday": "SPROUTS & FRUITS",
+            "tuesday": "BEAN SALAD & FRUITS",
+            "wednesday": "FRUIT OATS",
+            "thursday": "SPROUTS & FRUITS",
+            "friday": "SPROUTS & FRUITS",
+            "saturday": "SPROUTS & WATERMELON JUICE/ MANGO SHAKE",
+            "sunday": "SPROUTS & CHOCOS"
+        }
+    },
+    "lunch": {
+        "Rice": {
+            "monday": "PLAIN RICE",
+            "tuesday": "STEAMED RICE",
+            "wednesday": "PLAIN RICE",
+            "thursday": "LEMON RICE",
+            "friday": "KHICHDI",
+            "saturday": "PLAIN RICE",
+            "sunday": "STEAMED RICE"
+        },
+        "Roti": {
+            "monday": "CHAPPATI",
+            "tuesday": "CHAPPATI",
+            "wednesday": "CHAPPATI",
+            "thursday": "CHAPPATI",
+            "friday": "CHAPPATI",
+            "saturday": "CHAPPATI",
+            "sunday": "BHATURE+KULCHE"
+        },
+        "Dal": {
+            "monday": "RAJMA RASILA",
+            "tuesday": "MIX LIGHT DAL",
+            "wednesday": "DAL TADKA",
+            "thursday": "DAL MAHARANI",
+            "friday": "DAL, KADHI PAKODA",
+            "saturday": "KALI MASOOR DAL",
+            "sunday": "PINDI CHOLE"
+        },
+        "Vegetable": {
+            "monday": "ALOO KI SABZI",
+            "tuesday": "MATAR PANEER",
+            "wednesday": "SOYABEAN CHILLI",
+            "thursday": "PAV BHAJI",
+            "friday": "ALOO JEERA",
+            "saturday": "PANEER+EGG BHURJI",
+            "sunday": "ALOO CHOKHA"
+        },
+        "Salad": {
+            "monday": "GREEN SALAD",
+            "tuesday": "SEASONAL SALAD",
+            "wednesday": "KACHUMBAR SALAD",
+            "thursday": "GREEN SALAD",
+            "friday": "PASTA SALAD",
+            "saturday": "GREEN SALAD",
+            "sunday": "GREEN SALAD"
+        },
+        "Curd/Raita/Papad": {
+            "monday": "ROASTED PAPAD + CURD",
+            "tuesday": "CUCUMBER RAITA",
+            "wednesday": "CURD",
+            "thursday": "BOONDI RAITA",
+            "friday": "FRIED PAPAD",
+            "saturday": "PINEAPPLE RAITA",
+            "sunday": "DAHI BHALLE"
+        },
+        "Extra Messing": {
+            "monday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "tuesday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "wednesday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "thursday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "friday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "saturday": "NA",
+            "sunday": "NA"
+        }
+    },
+    "snacks": {
+        "Beverage": {
+            "monday": "COFFEE",
+            "tuesday": "TEA",
+            "wednesday": "TEA",
+            "thursday": "COFFEE",
+            "friday": "TEA",
+            "saturday": "TEA",
+            "sunday": "TEA"
+        },
+        "Snacks": {
+            "monday": "MASALA ALOO + BREAD",
+            "tuesday": "BREAD + JAM",
+            "wednesday": "BREAD + JAM",
+            "thursday": "MASALA ALOO + BREAD",
+            "friday": "MASALA ALOO + BREAD",
+            "saturday": "MASALA ALOO + BREAD + JAM",
+            "sunday": "MASALA ALOO + BREAD + JAM"
+        },
+        "Extra Messing": {
+            "monday": "SAMOSA",
+            "tuesday": "SAMOSA",
+            "wednesday": "SAMOSA",
+            "thursday": "SAMOSA",
+            "friday": "SAMOSA",
+            "saturday": "SAMOSA",
+            "sunday": "SAMOSA"
+        }
+    },
+    "dinner": {
+        "Rice": {
+            "monday": "STEAMED RICE",
+            "tuesday": "JEERA PULAO",
+            "wednesday": "PLAIN RICE",
+            "thursday": "PLAIN RICE",
+            "friday": "FRIED RICE",
+            "saturday": "TBA",
+            "sunday": "VEG + EGG/ CHICKEN BIRYANI"
+        },
+        "Roti": {
+            "monday": "CHAPPATI",
+            "tuesday": "PURI + CHAPPATI*",
+            "wednesday": "CHAPPATI",
+            "thursday": "CHAPPATI",
+            "friday": "CHAPPATI",
+            "saturday": "TBA",
+            "sunday": "CHAPPATI"
+        },
+        "Dal": {
+            "monday": "DAL PUNJABI",
+            "tuesday": "AMRITSARI CHOLEY",
+            "wednesday": "MIX DAL LIGHT",
+            "thursday": "DAL MAKHANI",
+            "friday": "DAL",
+            "saturday": "TBA",
+            "sunday": "TOMATO PYAAZ RAITA"
+        },
+        "Vegetable": {
+            "monday": "KADHAI PANEER/EGG CURRY",
+            "tuesday": "KADDU MASALA/ALOO TAMATAR",
+            "wednesday": "PANEER BUTTER MASALA/ CHICKEN CURRY",
+            "thursday": "JIMMIKAND MASALA",
+            "friday": "MANCHURIAN",
+            "saturday": "TBA",
+            "sunday": "KALACHANA MASALA"
+        },
+        "Salad/Soup": {
+            "monday": "GREEN SALAD",
+            "tuesday": "GREEN SALAD",
+            "wednesday": "GREEN SALAD",
+            "thursday": "GREEN SALAD",
+            "friday": "GREEN SALAD",
+            "saturday": "TBA",
+            "sunday": "GREEN SALAD"
+        },
+        "Desserts": {
+            "monday": "FRUIT CUSTARD",
+            "tuesday": "KHEER",
+            "wednesday": "PASTRY",
+            "thursday": "GULAB JAMUN WITH ICE CREAM",
+            "friday": "TILLA KULFI",
+            "saturday": "TBA",
+            "sunday": "MILK CAKE"
+        }
+    }
+}
