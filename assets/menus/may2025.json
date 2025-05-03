@@ -138,7 +138,7 @@
             "wednesday": "PLAIN RICE",
             "thursday": "PLAIN RICE",
             "friday": "FRIED RICE",
-            "saturday": "TBA",
+            "saturday": "Jeera rice",
             "sunday": "VEG + EGG/ CHICKEN BIRYANI"
         },
         "Roti": {
@@ -147,7 +147,7 @@
             "wednesday": "CHAPPATI",
             "thursday": "CHAPPATI",
             "friday": "CHAPPATI",
-            "saturday": "TBA",
+            "saturday": "CHAPATI",
             "sunday": "CHAPPATI"
         },
         "Dal": {
@@ -156,7 +156,7 @@
             "wednesday": "MIX DAL LIGHT",
             "thursday": "DAL MAKHANI",
             "friday": "DAL",
-            "saturday": "TBA",
+            "saturday": "DAL",
             "sunday": "TOMATO PYAAZ RAITA"
         },
         "Vegetable": {
@@ -165,7 +165,7 @@
             "wednesday": "PANEER BUTTER MASALA/ CHICKEN CURRY",
             "thursday": "JIMMIKAND MASALA",
             "friday": "MANCHURIAN",
-            "saturday": "TBA",
+            "saturday": "Soya chaap",
             "sunday": "KALACHANA MASALA"
         },
         "Salad/Soup": {
@@ -174,7 +174,7 @@
             "wednesday": "GREEN SALAD",
             "thursday": "GREEN SALAD",
             "friday": "GREEN SALAD",
-            "saturday": "TBA",
+            "saturday": "GREEN SALAD",
             "sunday": "GREEN SALAD"
         },
         "Desserts": {
@@ -183,7 +183,7 @@
             "wednesday": "PASTRY",
             "thursday": "GULAB JAMUN WITH ICE CREAM",
             "friday": "TILLA KULFI",
-            "saturday": "TBA",
+            "saturday": "Custard",
             "sunday": "MILK CAKE"
         }
     }
