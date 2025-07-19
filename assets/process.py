@@ -21,6 +21,6 @@ def csv_to_json(csv_filename, json_filename):
         json.dump(data, json_file, indent=4)
 
 # Run the conversion
-csv_to_json("april2025.csv", "april2025.json")
+csv_to_json("../assets/menus/july2025.csv", "july2025.json")
 
 print("✅ JSON file created: menu.json")

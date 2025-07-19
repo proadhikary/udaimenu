@@ -1,0 +1,64 @@
+{
+    "breakfast": {
+        "Meals": {
+            "monday": "SANDWICH, POHA & SEV, CUTLET, MASALA OATS, SPROUTS,FRUITS",
+            "tuesday": "MASALA CORN, BESAN CHILA, NAMKEEN SEWAIYAN,MUESLI,FRUITS",
+            "wednesday": "VADA, SAMBHAR WITH 2 CHUTNEY: COCONUT & TOMATO, KALA CHANA, FRUIT OATS",
+            "thursday": "PANEER PARATHA,DAHI, CHATNEY, CORNFLAKES, SPROUTS, FRUIT",
+            "friday": "BREAD PAKODA, CHATNEY, OMELETTE,SUJI KA HALWA, SPROUTS, CORNFLAKES, FRUITS",
+            "saturday": "ALOO PYAAZ PARATHA, PICKLE, MINT CHATNEY & DAHI, MUESLI",
+            "sunday": "DOSA, SAMBHAR WITH 2 CHUTNEY: COCONUT & TOMATO, BOILED EGGS, CHOCOS,SPROUTS"
+        }
+    },
+    "lunch": {
+        "Meals": {
+            "monday": "RAJMA DAL, ALOO MUTTER, RICE,ROTI,SALAD,ROASTED PAPAD,DAHI",
+            "tuesday": "MUTTER PANEER, MOONG+MALKA DAL, BOONDI RAITA,SALAD,RICE, ROTI",
+            "wednesday": "BHINDI MASALA, RICE, ROTI, DAL TADKA CHANA, SALAD, DAHI",
+            "thursday": "KADHI PAKORA , JEERA ALOO, DAL,ROTI,FRIED PAPAD",
+            "friday": "LOKI CHANA, DAL SABUT , RICE, ROTI, SALAD, LASSI",
+            "saturday": "PANEER/EGG BHURJI, KALI MASOOR DAL, RICE, ROTI , SALAD, PINEAPPLE RAITA",
+            "sunday": "PINDI CHOLE, ALOO CHOKHA, BHATURA, KULCHE, RICE, ROTI, SALAD, DAHI BHALLA"
+        },
+        "Extra Messing": {
+            "monday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "tuesday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "wednesday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "thursday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "friday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+            "saturday": "NA",
+            "sunday": "NA"
+        }
+    },
+    "snacks": {
+        "Meals": {
+            "monday": "COFFEE, MASALA ALOO",
+            "tuesday": "TEA, BREAD+JAM,",
+            "wednesday": "TEA, BREAD+JAM,",
+            "thursday": "COFFEE, MASALA ALOO, BREAD",
+            "friday": "TEA, MASALA ALOO, BREAD",
+            "saturday": "TEA, MASALA ALOO,BREAD",
+            "sunday": "TEA, JAM,BREAD"
+        },
+        "Extra Messing": {
+            "monday": "SAMOSA",
+            "tuesday": "SAMOSA",
+            "wednesday": "SAMOSA",
+            "thursday": "SAMOSA",
+            "friday": "SAMOSA",
+            "saturday": "SAMOSA",
+            "sunday": "SAMOSA"
+        }
+    },
+    "dinner": {
+        "Meals": {
+            "monday": "KADHAI PANEER/EGG CURRY, MOONG + MALKA DAL, RICE, MUGHLAI PARATHA, SALAD, FRUIT CUSTARD",
+            "tuesday": "AMRITSARI CHOLLE,KADDU MASALA/ALOO TAMATAR, AJWAIN PURI, ROTI, JEERA RICE, SALAD, KHEER",
+            "wednesday": "PANEER BUTTER MASALA/ CHICKEN CURRY, DAL MIX, RICE,ROOMALI ROTI,SALAD",
+            "thursday": "MIX VEG,DAL MAKHNI, PEAS PULAO, ROTI ,SALAD",
+            "friday": "MANCHURIAN, FRIED RICE, DAL MOONG + MALKA, ROTI, SALAD",
+            "saturday": "ALOO DUM, DAL ARHAR, JEERA RICE,ROTI,SALAD, FRYUMS",
+            "sunday": "VEG / EGG / CHICKEN BIRYANI, KALA CHANA SUBZI, TOMATO PYAAZ RAITA, ROTI"
+        }
+    }
+}

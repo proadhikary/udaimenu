@@ -10,7 +10,7 @@ const mealTimings = {
 };
 
 function fetchMenuData() {
-    fetch('assets/menus/may2025.json')
+    fetch('assets/menus/july2025.json')
         .then(response => response.json())
         .then(data => {
             menuData = data;
