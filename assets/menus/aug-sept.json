@@ -1,46 +1,64 @@
 {
   "breakfast": {
-   "Meals": {
-    "monday": "Sandwich, Poha & Sev, Vada Pav, Masala Oats, Sprouts, Fruits",
-    "tuesday": "Masala Corn, Besan Chila, Chocos, Fruits",
-    "wednesday": "Vada, Sambhar With 2 Chutney: Coconut & Tomato, Kala Chana, Fruit Oats",
-    "thursday": "Paneer Paratha, Dahi, Chatney, Cornflakes, Sprouts, Fruit",
-    "friday": "Bread Pakoda, Omelette, Suji Ka Halwa, Namkeen Sewaiyan, Sprouts, Cornflakes, Fruits",
-    "saturday": "Aloo Pyaaz Paratha, Pickle, Mint Chatney & Dahi, Muesli",
-    "sunday": "Dosa, Sambhar With 2 Chutney: Coconut & Tomato, Boiled Eggs, Chocos, Sprouts"
-   }
+    "Meals": {
+      "monday": "Sandwich, Poha & Sev, Vada Pav, Masala Oats, Sprouts, Fruits",
+      "tuesday": "Masala Corn, Besan Chila, Chocos, Fruits",
+      "wednesday": "Vada, Sambhar With 2 Chutney: Coconut & Tomato, Kala Chana, Fruit Oats",
+      "thursday": "Paneer Paratha, Dahi, Chatney, Cornflakes, Sprouts, Fruit",
+      "friday": "Bread Pakoda, Omelette, Suji Ka Halwa, Namkeen Sewaiyan, Sprouts, Cornflakes, Fruits",
+      "saturday": "Aloo Pyaaz Paratha, Pickle, Mint Chatney & Dahi, Muesli",
+      "sunday": "Dosa, Sambhar With 2 Chutney: Coconut & Tomato, Boiled Eggs, Chocos, Sprouts"
+    }
   },
   "lunch": {
-   "Meals": {
-    "monday": "Rajma Dal, Aloo Mutter/Aloo Shimla, Rice, Roti, Salad, Roasted Papad, Dahi",
-    "tuesday": "Mutter Paneer, Moong+Malka Dal, Boondi Raita, Salad, Rice, Roti",
-    "wednesday": "Bhindi Masala, Rice, Roti, Dal Tadka Chana, Salad, Dahi",
-    "thursday": "Kadhi Pakora, Jeera Aloo, Dal, Roti, Fried Papad, Nimbu Pani",
-    "friday": "Soya Chilli, Dal, Rice, Roti, Salad, Lassi, Fryums",
-    "saturday": "Paneer/Egg Bhurji, Kali Masoor Dal, Rice, Roti, Salad, Pineapple Raita",
-    "sunday": "Pindi Chole, Aloo Chokha, Bhatura, Kulche, Rice, Roti, Salad, Dahi Bhalla"
-   }
+    "Meals": {
+      "monday": "Rajma Dal, Aloo Mutter/Aloo Shimla, Rice, Roti, Salad, Roasted Papad, Dahi",
+      "tuesday": "Mutter Paneer, Moong+Malka Dal, Boondi Raita, Salad, Rice, Roti",
+      "wednesday": "Bhindi Masala, Rice, Roti, Dal Tadka Chana, Salad, Dahi",
+      "thursday": "Kadhi Pakora, Jeera Aloo, Dal, Roti, Fried Papad, Nimbu Pani",
+      "friday": "Soya Chilli, Dal, Rice, Roti, Salad, Lassi, Fryums",
+      "saturday": "Paneer/Egg Bhurji, Kali Masoor Dal, Rice, Roti, Salad, Pineapple Raita",
+      "sunday": "Pindi Chole, Aloo Chokha, Bhatura, Kulche, Rice, Roti, Salad, Dahi Bhalla"
+    },
+    "Extra Messing": {
+      "monday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+      "tuesday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+      "wednesday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+      "thursday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+      "friday": "Andha Bhurji/Paneer Bhurji/Veg or Egg Fried Rice/Half Fry/Full Fry (EXTRA MESSING COUPONS)",
+      "saturday": "NA",
+      "sunday": "NA"
+    }
   },
   "snacks": {
-   "Meals": {
-    "monday": "Coffee, Paneer Bread Pakoda",
-    "tuesday": "Tea, Bhelpuri",
-    "wednesday": "Tea, Veg Sandwich",
-    "thursday": "Coffee, Paneer Bread Pakoda",
-    "friday": "Tea, Bhelpuri",
-    "saturday": "Tea, Veg Sandwich",
-    "sunday": "Tea, Masala Aloo, Bread"
-   }
+    "Meals": {
+      "monday": "Coffee, Paneer Bread Pakoda",
+      "tuesday": "Tea, Bhelpuri",
+      "wednesday": "Tea, Veg Sandwich",
+      "thursday": "Coffee, Paneer Bread Pakoda",
+      "friday": "Tea, Bhelpuri",
+      "saturday": "Tea, Veg Sandwich",
+      "sunday": "Tea, Masala Aloo, Bread"
+    },
+    "Extra Messing": {
+      "monday": "Samosa",
+      "tuesday": "Samosa",
+      "wednesday": "Samosa",
+      "thursday": "Samosa",
+      "friday": "Samosa",
+      "saturday": "Samosa",
+      "sunday": "Samosa"
+    }
   },
   "dinner": {
-   "Meals": {
-    "monday": "Kadhai Paneer/Egg Curry, Moong + Malka Dal, Rice, Mughlai Paratha, Salad, Fruit Custard",
-    "tuesday": "Amritsari Cholle, Kaddu Masala/Aloo Tamatar, Ajwain Puri, Roti, Jeera Rice, Salad, Kheer",
-    "wednesday": "Paneer Butter Masala/ Chicken Curry, Dal Mix, Rice, Roomali Roti, Salad, Sweet",
-    "thursday": "Pav Bhaji, Dal Makhni, Peas Pulao, Roti, Sweet Sevien, Masala Corn, Salad",
-    "friday": "Manchurian, Fried Rice, Dal Moong + Malka, Roti, Sweet, Salad",
-    "saturday": "Aloo Dum, Dal Arhar, Jeera Rice, Roti, Salad, Masala Papad",
-    "sunday": "Veg/Egg/Chicken Biryani, Kala Chana Subzi, Tomato Pyaaz Raita, Roti"
-   }
+    "Meals": {
+      "monday": "Kadhai Paneer/Egg Curry, Moong + Malka Dal, Rice, Mughlai Paratha, Salad, Fruit Custard",
+      "tuesday": "Amritsari Cholle, Kaddu Masala/Aloo Tamatar, Ajwain Puri, Roti, Jeera Rice, Salad, Kheer",
+      "wednesday": "Paneer Butter Masala/ Chicken Curry, Dal Mix, Rice, Roomali Roti, Salad, Sweet",
+      "thursday": "Pav Bhaji, Dal Makhni, Peas Pulao, Roti, Sweet Sevien, Masala Corn, Salad",
+      "friday": "Manchurian, Fried Rice, Dal Moong + Malka, Roti, Sweet, Salad",
+      "saturday": "Aloo Dum, Dal Arhar, Jeera Rice, Roti, Salad, Masala Papad",
+      "sunday": "Veg/Egg/Chicken Biryani, Kala Chana Subzi, Tomato Pyaaz Raita, Roti"
+    }
   }
- }
+}
