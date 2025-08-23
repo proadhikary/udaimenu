@@ -216,7 +216,7 @@ async function getDietitianSuggestion() {
     6. Format your response using clear headings, bold text, and bullet points (markdown). Do not use HTML tags.`;
 
     try {
-        const response = await fetch('/.netlify/functions/get-suggestion', {
+        const response = await fetch('/.netlify/functions/get-suggestion.js', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt: fullPrompt }),
