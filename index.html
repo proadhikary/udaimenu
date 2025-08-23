@@ -539,7 +539,7 @@
         // ======================================================
         // ============== NEW: GEMINI AI FUNCTIONS ==============
         // ======================================================
-        
+
         async function getDietitianSuggestion() {
             const userPromptText = document.getElementById('ai-prompt').value;
             const suggestionBtn = document.getElementById('get-suggestion-btn');
@@ -604,7 +604,7 @@
 
             } catch (error) {
                 console.error("API Error:", error);
-                responseDiv.innerHTML = `<p class="text-danger">Sorry, I couldn't generate a suggestion right now. Please check the console for errors.</p>`;
+                responseDiv.innerHTML = `<p class="text-danger">Sorry, your dietBuddy is taking a small nap...</p>`;
             } finally {
                 // --- Reset button ---
                 suggestionBtn.disabled = false;
