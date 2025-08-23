@@ -254,7 +254,7 @@ async function handleFormSubmit(event, formType) {
         formObject.formType = formType;
 
         // CORRECTED PATH: Removed .js from the end
-        const response = await fetch('/.netlify/functions/submit-form', {
+        const response = await fetch('/.netlify/functions/submit-form.js', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formObject)
