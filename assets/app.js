@@ -1,13 +1,13 @@
 let menuData = {};
 let userDate = new Date();
-let userHasInteractedToday = false; 
+let userHasInteractedToday = false;
 const daysOfWeek = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
 const mealTimings = {
     "breakfast": { start: [7, 30], end: [9, 30] },
-    "lunch":     { start: [12, 0], end: [14, 0] },
-    "snacks":    { start: [16, 30], end: [17, 30] },
-    "dinner":    { start: [19, 0], end: [21, 0] }
+    "lunch": { start: [12, 0], end: [14, 0] },
+    "snacks": { start: [16, 30], end: [17, 30] },
+    "dinner": { start: [19, 0], end: [21, 0] }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function areDatesOnSameDay(date1, date2) {
     return date1.getFullYear() === date2.getFullYear() &&
-            date1.getMonth() === date2.getMonth() &&
-            date1.getDate() === date2.getDate();
+        date1.getMonth() === date2.getMonth() &&
+        date1.getDate() === date2.getDate();
 }
 
 function createDate(hours, minutes) {
@@ -57,11 +57,11 @@ function getCurrentMealState() {
             return { meal, status: "ongoing", timeLeft: (endTime - now), totalDuration: (endTime - startTime), targetDate: now };
         }
     }
-        
+
     for (const meal of ["breakfast", "lunch", "snacks", "dinner"]) {
         const startTime = createDate(...mealTimings[meal].start);
         if (now < startTime) {
-                return { meal, status: "upcoming", timeLeft: (startTime - now), targetDate: now };
+            return { meal, status: "upcoming", timeLeft: (startTime - now), targetDate: now };
         }
     }
 
@@ -73,7 +73,7 @@ function getCurrentMealState() {
     nextBreakfastTime.setFullYear(tomorrow.getFullYear());
     return { meal: "breakfast", status: "upcoming", timeLeft: (nextBreakfastTime - now), targetDate: tomorrow };
 }
-    
+
 function formatTime(ms) {
     const totalMinutes = Math.round(ms / 60000);
     const hrs = Math.floor(totalMinutes / 60);
@@ -84,7 +84,7 @@ function formatTime(ms) {
 function updateLiveState() {
     const state = getCurrentMealState();
     updateProgressBar(state);
-    
+
     if (isToday(userDate) && !userHasInteractedToday) {
         const activeTab = document.querySelector('.btn-meal.active-tab');
         const activeMeal = activeTab ? activeTab.id.toLowerCase() : null;
@@ -93,12 +93,12 @@ function updateLiveState() {
         }
     }
 }
-    
+
 function updateProgressBar(state) {
     const { meal, status, timeLeft, totalDuration } = state;
     const indicator = document.getElementById("progressBarIndicator");
     const text = document.getElementById("progressBarText");
-        
+
     if (status === "ongoing") {
         const progress = ((totalDuration - timeLeft) / totalDuration) * 100;
         indicator.style.width = `${progress}%`;
@@ -112,27 +112,27 @@ function updateProgressBar(state) {
 function loadMenu(mealToShow, dateToShow) {
     const currentDay = daysOfWeek[dateToShow.getDay()];
     const menuTable = document.getElementById("menuTable");
-    menuTable.innerHTML = ""; 
+    menuTable.innerHTML = "";
 
     const mealData = menuData[mealToShow];
     let extraMessingItem = "Not Available";
 
     if (mealData) {
         if (mealData["Meals"] && mealData["Meals"][currentDay]) {
-                const items = mealData["Meals"][currentDay].split(',');
-                items.forEach(item => {
+            const items = mealData["Meals"][currentDay].split(',');
+            items.forEach(item => {
                 if (item.trim()) {
                     const tr = document.createElement("tr");
                     tr.innerHTML = `<td>Meal</td><td>${item.trim()}</td>`;
                     menuTable.appendChild(tr);
                 }
-                });
+            });
         } else {
-                const tr = document.createElement("tr");
-                tr.innerHTML = `<td>Meal</td><td>Not Available</td>`;
-                menuTable.appendChild(tr);
+            const tr = document.createElement("tr");
+            tr.innerHTML = `<td>Meal</td><td>Not Available</td>`;
+            menuTable.appendChild(tr);
         }
-            
+
         if (mealData["Extra Messing"] && mealData["Extra Messing"][currentDay]) {
             extraMessingItem = mealData["Extra Messing"][currentDay];
         }
@@ -144,7 +144,7 @@ function loadMenu(mealToShow, dateToShow) {
 }
 
 function updateDateDisplay(date) {
-    document.getElementById("currentDate").innerText = 
+    document.getElementById("currentDate").innerText =
         date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 }
 
@@ -165,15 +165,15 @@ function loadMenuByUser(selectedMeal) {
 
 function changeDate(days) {
     userDate.setDate(userDate.getDate() + days);
-    userHasInteractedToday = false; 
+    userHasInteractedToday = false;
     loadMenuByUser('breakfast');
 }
-    
+
 function isToday(someDate) {
     const today = new Date();
     return someDate.getDate() === today.getDate() &&
-            someDate.getMonth() === today.getMonth() &&
-            someDate.getFullYear() === today.getFullYear();
+        someDate.getMonth() === today.getMonth() &&
+        someDate.getFullYear() === today.getFullYear();
 }
 
 async function getDietitianSuggestion() {
@@ -196,8 +196,8 @@ async function getDietitianSuggestion() {
     const mealType = activeMealTab ? activeMealTab.innerText.split('\n')[1] : "the current meal";
 
     let menuItems = Array.from(document.querySelectorAll('#menuTable tr'))
-                            .map(row => row.cells[1] ? row.cells[1].innerText.trim() : null)
-                            .filter(Boolean);
+        .map(row => row.cells[1] ? row.cells[1].innerText.trim() : null)
+        .filter(Boolean);
     const menuContext = menuItems.join(', ');
 
     const fullPrompt = `You are an expert AI dietitian for a student mess. Your task is to provide helpful, actionable dietary advice based on the available menu and a student's specific requirement.
@@ -235,52 +235,5 @@ async function getDietitianSuggestion() {
     } finally {
         suggestionBtn.disabled = false;
         suggestionBtn.innerText = 'Get Suggestion';
-    }
-}
-
-async function handleFormSubmit(event, formType) {
-    event.preventDefault();
-
-    const submitButton = event.submitter;
-    const form = event.target;
-    const originalButtonText = submitButton.innerHTML;
-
-    submitButton.disabled = true;
-    submitButton.innerHTML = 'Submitting...';
-
-    try {
-        const formData = new FormData(form);
-        const formObject = Object.fromEntries(formData.entries());
-        formObject.formType = formType;
-
-        // CORRECTED PATH: Removed .js from the end
-        const response = await fetch('/.netlify/functions/submit-form', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formObject)
-        });
-
-        if (!response.ok) {
-            // Try to get more specific error info from the response body
-            const errorData = await response.json().catch(() => ({ message: 'An unknown error occurred.' }));
-            throw new Error(errorData.message || 'Something went wrong.');
-        }
-
-        const result = await response.json();
-
-        submitButton.innerHTML = 'Submitted Successfully!';
-        form.reset();
-        setTimeout(() => {
-            submitButton.disabled = false;
-            submitButton.innerHTML = originalButtonText;
-        }, 3000);
-
-    } catch (error) {
-        submitButton.innerHTML = 'Submission Failed';
-        alert(`Error: ${error.message}`);
-        setTimeout(() => {
-            submitButton.disabled = false;
-            submitButton.innerHTML = originalButtonText;
-        }, 3000);
     }
 }

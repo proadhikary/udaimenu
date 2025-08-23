@@ -82,7 +82,7 @@
                 Get Suggestion
             </button>
             <div id="ai-response-container" class="mt-4" style="display: none;">
-                <h5 class="fw-bold">Gemini's Suggestion:</h5>
+                <h5 class="fw-bold">Buddy's Suggestion:</h5>
                 <div id="ai-response" class="p-3 rounded"></div>
             </div>
         </section>
@@ -107,7 +107,8 @@
 
         <section class="content-card">
             <h2 class="content-card-title">Suggestion Box</h2>
-            <form id="suggestion-form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="a91551ec-d2d3-41fe-831e-dde4564012ff" />
                 <input type="hidden" name="subject" value="New Suggestion from a student!" />
                 <div class="mb-3">
                     <textarea class="form-control" name="message" rows="4" placeholder="Share your suggestions..."
@@ -117,39 +118,36 @@
             </form>
         </section>
 
-        <section class="content-card">
-            <h2 class="content-card-title">Complaint Box</h2>
-            <form id="complaint-form">
-                <input type="hidden" name="subject" value="New Complaint from a student!" />
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <label for="date" class="form-label">Date*</label>
-                        <input id="date" name="date" type="date" class="form-control" required />
-                    </div>
-                    <div class="col-md-6">
-                        <label for="mealType" class="form-label">Select Meal*</label>
-                        <input id="mealType" name="mealType" type="text" class="form-control"
-                            placeholder="e.g., Breakfast/Lunch" required />
-                    </div>
-                    <div class="col-md-6">
-                        <label for="name" class="form-label">Name</label>
-                        <input id="name" name="name" class="form-control" placeholder="Your name" type="text" />
-                    </div>
-                    <div class="col-md-6">
-                        <label for="phone" class="form-label">Phone*</label>
-                        <input id="phone" name="phone" class="form-control" placeholder="+91 98765 43210" type="text"
-                            required />
-                    </div>
-                    <div class="col-12">
-                        <label for="message" class="form-label">Message*</label>
-                        <textarea class="form-control" id="message" name="message" placeholder="Describe your complaint"
-                            rows="4" required></textarea>
-                    </div>
-                </div>
-                <button class="form-submit mt-3" type="submit">Submit Complaint</button>
-            </form>
-        </section>
-    </div>
+      <section class="content-card">
+    <h2 class="content-card-title">Complaint Box</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="a91551ec-d2d3-41fe-831e-dde4564012ff" />
+        <input type="hidden" name="subject" value="New Complaint from a student!" />
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="date" class="form-label">Date*</label>
+                <input id="date" name="date" type="date" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+                <label for="mealType" class="form-label">Select Meal*</label>
+                <input id="mealType" name="mealType" type="text" class="form-control" placeholder="e.g., Breakfast/Lunch" required />
+            </div>
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input id="name" name="name" class="form-control" placeholder="Your name" type="text" />
+            </div>
+            <div class="col-md-6">
+                <label for="phone" class="form-label">Phone*</label>
+                <input id="phone" name="phone" class="form-control" placeholder="+91 98765 43210" type="text" required />
+            </div>
+            <div class="col-12">
+                <label for="message" class="form-label">Message*</label>
+                <textarea class="form-control" id="message" name="message" placeholder="Describe your complaint" rows="4" required></textarea>
+            </div>
+        </div>
+        <button class="form-submit mt-3" type="submit">Submit Complaint</button>
+    </form>
+</section>
 
     <footer class="footer">
         <div class="container" style="background-color: #fff; border-radius: 20px; width:200px;">
