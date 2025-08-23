@@ -1,14 +1,13 @@
-
 let menuData = {};
-let userDate = new Date(); // This will be corrected below if needed
-let userHasInteractedToday = false;
+let userDate = new Date();
+let userHasInteractedToday = false; 
 const daysOfWeek = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
 const mealTimings = {
     "breakfast": { start: [7, 30], end: [9, 30] },
-    "lunch": { start: [12, 0], end: [14, 0] },
-    "snacks": { start: [16, 30], end: [17, 30] },
-    "dinner": { start: [19, 0], end: [21, 0] }
+    "lunch":     { start: [12, 0], end: [14, 0] },
+    "snacks":    { start: [16, 30], end: [17, 30] },
+    "dinner":    { start: [19, 0], end: [21, 0] }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,12 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             menuData = data;
-
-            // --- KEY FIX: Perform the initial load correctly here ---
-            // We use initialState.meal but userDate because userDate is now correctly set.
             loadMenu(initialState.meal, userDate);
-
-            // Now, start the interval for live progress bar and meal transitions.
             setInterval(updateLiveState, 1000);
         })
         .catch(error => console.error("Error loading menu data:", error));
@@ -42,14 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ===============================================
-// ============== HELPER FUNCTIONS ===============
-// ===============================================
-
 function areDatesOnSameDay(date1, date2) {
     return date1.getFullYear() === date2.getFullYear() &&
-        date1.getMonth() === date2.getMonth() &&
-        date1.getDate() === date2.getDate();
+            date1.getMonth() === date2.getMonth() &&
+            date1.getDate() === date2.getDate();
 }
 
 function createDate(hours, minutes) {
@@ -67,11 +57,11 @@ function getCurrentMealState() {
             return { meal, status: "ongoing", timeLeft: (endTime - now), totalDuration: (endTime - startTime), targetDate: now };
         }
     }
-
+        
     for (const meal of ["breakfast", "lunch", "snacks", "dinner"]) {
         const startTime = createDate(...mealTimings[meal].start);
         if (now < startTime) {
-            return { meal, status: "upcoming", timeLeft: (startTime - now), targetDate: now };
+                return { meal, status: "upcoming", timeLeft: (startTime - now), targetDate: now };
         }
     }
 
@@ -83,7 +73,7 @@ function getCurrentMealState() {
     nextBreakfastTime.setFullYear(tomorrow.getFullYear());
     return { meal: "breakfast", status: "upcoming", timeLeft: (nextBreakfastTime - now), targetDate: tomorrow };
 }
-
+    
 function formatTime(ms) {
     const totalMinutes = Math.round(ms / 60000);
     const hrs = Math.floor(totalMinutes / 60);
@@ -91,18 +81,11 @@ function formatTime(ms) {
     return hrs > 0 ? `${hrs}h ${mins}m` : `${mins}m`;
 }
 
-// ===============================================
-// ============== UI UPDATE FUNCTIONS ============
-// ===============================================
-
 function updateLiveState() {
     const state = getCurrentMealState();
     updateProgressBar(state);
-
-    // --- KEY FIX: This function now only handles live transitions on the CURRENT day ---
-    // The initial load is handled separately in DOMContentLoaded.
+    
     if (isToday(userDate) && !userHasInteractedToday) {
-        // Check if the displayed tab matches the current live meal
         const activeTab = document.querySelector('.btn-meal.active-tab');
         const activeMeal = activeTab ? activeTab.id.toLowerCase() : null;
         if (activeMeal !== state.meal) {
@@ -110,12 +93,12 @@ function updateLiveState() {
         }
     }
 }
-
+    
 function updateProgressBar(state) {
     const { meal, status, timeLeft, totalDuration } = state;
     const indicator = document.getElementById("progressBarIndicator");
     const text = document.getElementById("progressBarText");
-
+        
     if (status === "ongoing") {
         const progress = ((totalDuration - timeLeft) / totalDuration) * 100;
         indicator.style.width = `${progress}%`;
@@ -129,27 +112,27 @@ function updateProgressBar(state) {
 function loadMenu(mealToShow, dateToShow) {
     const currentDay = daysOfWeek[dateToShow.getDay()];
     const menuTable = document.getElementById("menuTable");
-    menuTable.innerHTML = "";
+    menuTable.innerHTML = ""; 
 
     const mealData = menuData[mealToShow];
     let extraMessingItem = "Not Available";
 
     if (mealData) {
         if (mealData["Meals"] && mealData["Meals"][currentDay]) {
-            const items = mealData["Meals"][currentDay].split(',');
-            items.forEach(item => {
+                const items = mealData["Meals"][currentDay].split(',');
+                items.forEach(item => {
                 if (item.trim()) {
                     const tr = document.createElement("tr");
                     tr.innerHTML = `<td>Meal</td><td>${item.trim()}</td>`;
                     menuTable.appendChild(tr);
                 }
-            });
+                });
         } else {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `<td>Meal</td><td>Not Available</td>`;
-            menuTable.appendChild(tr);
+                const tr = document.createElement("tr");
+                tr.innerHTML = `<td>Meal</td><td>Not Available</td>`;
+                menuTable.appendChild(tr);
         }
-
+            
         if (mealData["Extra Messing"] && mealData["Extra Messing"][currentDay]) {
             extraMessingItem = mealData["Extra Messing"][currentDay];
         }
@@ -161,7 +144,7 @@ function loadMenu(mealToShow, dateToShow) {
 }
 
 function updateDateDisplay(date) {
-    document.getElementById("currentDate").innerText =
+    document.getElementById("currentDate").innerText = 
         date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 }
 
@@ -173,12 +156,7 @@ function updateActiveTab(activeMeal) {
     }
 }
 
-// ===============================================
-// ============== USER INTERACTIONS ==============
-// ===============================================
-
 function loadMenuByUser(selectedMeal) {
-    // Set interaction flag only if user is clicking tabs on the actual current day
     if (isToday(userDate)) {
         userHasInteractedToday = true;
     }
@@ -187,20 +165,16 @@ function loadMenuByUser(selectedMeal) {
 
 function changeDate(days) {
     userDate.setDate(userDate.getDate() + days);
-    userHasInteractedToday = false;
+    userHasInteractedToday = false; 
     loadMenuByUser('breakfast');
 }
-
+    
 function isToday(someDate) {
     const today = new Date();
     return someDate.getDate() === today.getDate() &&
-        someDate.getMonth() === today.getMonth() &&
-        someDate.getFullYear() === today.getFullYear();
+            someDate.getMonth() === today.getMonth() &&
+            someDate.getFullYear() === today.getFullYear();
 }
-
-// ======================================================
-// ============== SECURE GEMINI AI FUNCTION ==============
-// ======================================================
 
 async function getDietitianSuggestion() {
     const userPromptText = document.getElementById('ai-prompt').value;
@@ -222,27 +196,27 @@ async function getDietitianSuggestion() {
     const mealType = activeMealTab ? activeMealTab.innerText.split('\n')[1] : "the current meal";
 
     let menuItems = Array.from(document.querySelectorAll('#menuTable tr'))
-        .map(row => row.cells[1] ? row.cells[1].innerText.trim() : null)
-        .filter(Boolean);
+                            .map(row => row.cells[1] ? row.cells[1].innerText.trim() : null)
+                            .filter(Boolean);
     const menuContext = menuItems.join(', ');
 
     const fullPrompt = `You are an expert AI dietitian for a student mess. Your task is to provide helpful, actionable dietary advice based on the available menu and a student's specific requirement.
 
-**Context:**
-- Meal Type: ${mealType}
-- Available Menu Items: ${menuContext}
-- Student's Requirement: "${userPromptText}"
+    **Context:**
+    - Meal Type: ${mealType}
+    - Available Menu Items: ${menuContext}
+    - Student's Requirement: "${userPromptText}"
 
-**Your Instructions:**
-1. Analyze the student's requirement and the available menu.
-2. Suggest a combination of items from the menu that best fits their goal.
-3. Recommend practical portion sizes (e.g., "1 bowl of dal", "2 rotis", "a small portion of rice").
-4. Briefly explain *why* your suggestion is suitable for their goal.
-5. If the menu is not ideal for their goal, politely explain why and suggest what to look for in future meals.
-6. Format your response using clear headings, bold text, and bullet points (markdown). Do not use HTML tags.`;
+    **Your Instructions:**
+    1. Analyze the student's requirement and the available menu.
+    2. Suggest a combination of items from the menu that best fits their goal.
+    3. Recommend practical portion sizes(if quantity, return in grams) (e.g., "1 bowl of dal(in your thali)", "2 rotis", "a small portion of rice").
+    4. Briefly explain *why* your suggestion is suitable for their goal.
+    5. If the menu is not ideal for their goal, politely explain why and suggest what to look for in future meals.
+    6. Format your response using clear headings, bold text, and bullet points (markdown). Do not use HTML tags.`;
 
     try {
-        const response = await fetch('/.netlify/functions/get-suggestion', {
+        const response = await fetch('/.netlify/functions/get-suggestion.js', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt: fullPrompt }),
@@ -264,14 +238,13 @@ async function getDietitianSuggestion() {
     }
 }
 
-// =============================================================
-// ============== SECURE W3FORMS SUBMISSION LOGIC ==============
-// =============================================================
-
+// --- IMPROVED AND FINAL VERSION OF THE FORM HANDLER ---
 async function handleFormSubmit(event, formType) {
-    event.preventDefault();
+    event.preventDefault(); // Stop the form from submitting the old way
+
+    // Use event.submitter which is a more reliable way to get the button
+    const submitButton = event.submitter;
     const form = event.target;
-    const submitButton = form.querySelector('button[type="submit"]');
     const originalButtonText = submitButton.innerHTML;
 
     submitButton.disabled = true;
@@ -280,9 +253,9 @@ async function handleFormSubmit(event, formType) {
     try {
         const formData = new FormData(form);
         const formObject = Object.fromEntries(formData.entries());
-        formObject.formType = formType;
+        formObject.formType = formType; 
 
-        const response = await fetch('/.netlify/functions/submit-form', {
+        const response = await fetch('/.netlify/functions/submit-form.js', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formObject)
