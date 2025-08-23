@@ -2,6 +2,8 @@
 
 This is a web application that displays the mess menu for UDAIGIRI Mess. The application shows the menu for different meals (Breakfast, Lunch, Snacks, Dinner) and updates the progress bar to indicate the current or next meal.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f474c61b-230a-4ba0-9e01-ed11ef5828ab/deploy-status)](https://app.netlify.com/projects/udai/deploys)
+
 ## Features
 
 - Displays the mess menu for different meals.
