@@ -216,7 +216,7 @@ async function getDietitianSuggestion() {
     6. Format your response using clear headings, bold text, and bullet points (markdown). Do not use HTML tags.`;
 
     try {
-        const response = await fetch('/.netlify/functions/get-suggestion.js', {
+        const response = await fetch('/.netlify/functions/get-suggestion', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt: fullPrompt }),
@@ -238,11 +238,9 @@ async function getDietitianSuggestion() {
     }
 }
 
-// --- IMPROVED AND FINAL VERSION OF THE FORM HANDLER ---
 async function handleFormSubmit(event, formType) {
-    event.preventDefault(); // Stop the form from submitting the old way
+    event.preventDefault();
 
-    // Use event.submitter which is a more reliable way to get the button
     const submitButton = event.submitter;
     const form = event.target;
     const originalButtonText = submitButton.innerHTML;
@@ -253,19 +251,22 @@ async function handleFormSubmit(event, formType) {
     try {
         const formData = new FormData(form);
         const formObject = Object.fromEntries(formData.entries());
-        formObject.formType = formType; 
+        formObject.formType = formType;
 
-        const response = await fetch('/.netlify/functions/submit-form.js', {
+        // CORRECTED PATH: Removed .js from the end
+        const response = await fetch('/.netlify/functions/submit-form', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formObject)
         });
 
-        const result = await response.json();
-
         if (!response.ok) {
-            throw new Error(result.message || 'Something went wrong.');
+            // Try to get more specific error info from the response body
+            const errorData = await response.json().catch(() => ({ message: 'An unknown error occurred.' }));
+            throw new Error(errorData.message || 'Something went wrong.');
         }
+
+        const result = await response.json();
 
         submitButton.innerHTML = 'Submitted Successfully!';
         form.reset();
