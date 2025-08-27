@@ -20,6 +20,14 @@
         <img src="assets/logo.png" alt="Udaigiri Logo" class="logo">
         <h1 class="header-title">UDAIGIRI MESS MENU<sup style="font-size:0.6em; color:#e1ee53;">AI</sup></h1>
     </header>
+    <div
+        style="background: #ffe600; color: #111; font-weight: bold; padding: 6px 0; border-radius: 8px; margin-bottom: 10px;">
+        <marquee behavior="scroll" direction="left" scrollamount="5" style="font-size:1.05em;">
+            On the auspicious occasion of Ganesh Chaturthi tomorrow(27th August) Veg Kathi Kabab and Faluda Kulfi will
+            be served in dinner tomorrow.
+            Note: Chicken will not be served tomorrow and instead chicken biryani will be served on sunday against this!
+        </marquee>
+    </div>
 
     <div class="container mt-4">
         <h4 class="text-center fw-bold" id="currentDate"></h4>
@@ -118,50 +126,53 @@
             </form>
         </section>
 
-      <section class="content-card">
-    <h2 class="content-card-title">Complaint Box</h2>
-    <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="a91551ec-d2d3-41fe-831e-dde4564012ff" />
-        <input type="hidden" name="subject" value="New Complaint from a student!" />
-        <div class="row g-3">
-            <div class="col-md-6">
-                <label for="date" class="form-label">Date*</label>
-                <input id="date" name="date" type="date" class="form-control" required />
-            </div>
-            <div class="col-md-6">
-                <label for="mealType" class="form-label">Select Meal*</label>
-                <input id="mealType" name="mealType" type="text" class="form-control" placeholder="e.g., Breakfast/Lunch" required />
-            </div>
-            <div class="col-md-6">
-                <label for="name" class="form-label">Name</label>
-                <input id="name" name="name" class="form-control" placeholder="Your name" type="text" />
-            </div>
-            <div class="col-md-6">
-                <label for="phone" class="form-label">Phone*</label>
-                <input id="phone" name="phone" class="form-control" placeholder="+91 98765 43210" type="text" required />
-            </div>
-            <div class="col-12">
-                <label for="message" class="form-label">Message*</label>
-                <textarea class="form-control" id="message" name="message" placeholder="Describe your complaint" rows="4" required></textarea>
-            </div>
-        </div>
-        <button class="form-submit mt-3" type="submit">Submit Complaint</button>
-    </form>
-</section>
+        <section class="content-card">
+            <h2 class="content-card-title">Complaint Box</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="a91551ec-d2d3-41fe-831e-dde4564012ff" />
+                <input type="hidden" name="subject" value="New Complaint from a student!" />
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="date" class="form-label">Date*</label>
+                        <input id="date" name="date" type="date" class="form-control" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="mealType" class="form-label">Select Meal*</label>
+                        <input id="mealType" name="mealType" type="text" class="form-control"
+                            placeholder="e.g., Breakfast/Lunch" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" name="name" class="form-control" placeholder="Your name" type="text" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Phone*</label>
+                        <input id="phone" name="phone" class="form-control" placeholder="+91 98765 43210" type="text"
+                            required />
+                    </div>
+                    <div class="col-12">
+                        <label for="message" class="form-label">Message*</label>
+                        <textarea class="form-control" id="message" name="message" placeholder="Describe your complaint"
+                            rows="4" required></textarea>
+                    </div>
+                </div>
+                <button class="form-submit mt-3" type="submit">Submit Complaint</button>
+            </form>
+        </section>
 
-    <footer class="footer">
-        <div class="container" style="background-color: #fff; border-radius: 20px; width:200px;">
-            <div style="text-align:center;">
-                <script type="text/javascript"
-                    src="https://services.webestools.com/cpt_pages_views/76542-1-7.js"></script>
+        <footer class="footer">
+            <div class="container" style="background-color: #fff; border-radius: 20px; width:200px;">
+                <div style="text-align:center;">
+                    <script type="text/javascript"
+                        src="https://services.webestools.com/cpt_pages_views/76542-1-7.js"></script>
+                </div>
             </div>
-        </div>
-        <p class="mb-1">Made with <i class="fa fa-heart text-danger"></i> by <a href="https://proadhikary.github.io"
-                target="_blank" style="text-decoration: none;">@proadhikary</a></p>
-        <p class="mb-0" style="font-size: 0.8rem;">Last Updated: Aug 23, 2025</p>
-    </footer>
+            <p class="mb-1">Made with <i class="fa fa-heart text-danger"></i> by <a href="https://proadhikary.github.io"
+                    target="_blank" style="text-decoration: none;">@proadhikary</a></p>
+            <p class="mb-0" style="font-size: 0.8rem;">Last Updated: Aug 23, 2025</p>
+        </footer>
 
-    <script src="assets/app.js"></script>
+        <script src="assets/app.js"></script>
 </body>
 
 </html>
