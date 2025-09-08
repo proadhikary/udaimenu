@@ -32,13 +32,22 @@
   },
   "snacks": {
     "Meals": {
-      "monday": "Coffee, Paneer Bread Pakoda(₹12)",
-      "tuesday": "Tea, Bhelpuri(₹12)",
-      "wednesday": "Tea, Veg Sandwich (₹12)",
-      "thursday": "Coffee, Paneer Bread Pakoda(₹12)",
-      "friday": "Tea, Bhelpuri (₹12)",
-      "saturday": "Tea, Veg Sandwich (₹12)",
-      "sunday": "Tea, Masala Aloo, Bread"
+      "monday": "Coffee, Bread",
+      "tuesday": "Tea, Bread",
+      "wednesday": "Tea, Bread",
+      "thursday": "Coffee, Bread",
+      "friday": "Tea, Bread",
+      "saturday": "Tea, Bread",
+      "sunday": "Tea, Bread"
+    },
+    "Extra Messing": {
+      "monday": "Paneer Bread Pakoda(₹20)",
+      "tuesday": "Bhelpuri(₹12)",
+      "wednesday": "Veg Sandwich (₹12)",
+      "thursday": "Paneer Bread Pakoda(₹20)",
+      "friday": "Bhelpuri (₹12)",
+      "saturday": "Veg Sandwich (₹12)",
+      "sunday": "NA"
     }
   },
   "dinner": {
