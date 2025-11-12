@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userDate = initialState.targetDate;
     }
 
-    fetch('assets/menus/oct.json')
+    fetch('assets/menus/nov2025.json')
         .then(response => response.json())
         .then(data => {
             menuData = data;
@@ -200,7 +200,7 @@ async function getDietitianSuggestion() {
         .filter(Boolean);
     const menuContext = menuItems.join(', ');
 
-    const fullPrompt = `You are an expert AI dietitian for a student mess. Your task is to provide helpful, actionable dietary advice based on the available menu and a student's specific requirement.
+    const fullPrompt = `You are an expert AI dietitian for a student mess. Your task is to provide helpful, actionable dietary advice based on the available menu and a student's specific requirement in as short as possible, in one paragraph.
 
     **Context:**
     - Meal Type: ${mealType}
@@ -211,7 +211,7 @@ async function getDietitianSuggestion() {
     1. Analyze the student's requirement and the available menu.
     2. Suggest a combination of items from the menu that best fits their goal.
     3. Recommend practical portion sizes(if quantity, return in grams) (e.g., "1 bowl of dal(in your thali)", "2 rotis", "a small portion of rice").
-    4. Briefly explain *why* your suggestion is suitable for their goal.
+    4. Shortly explain *why* your suggestion is suitable for their goal.
     5. If the menu is not ideal for their goal, politely explain why and suggest what to look for in future meals.
     6. Format your response using clear headings, bold text, and bullet points (markdown). Do not use HTML tags.`;
 
