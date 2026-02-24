@@ -11,6 +11,37 @@ const mealTimings = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Donation Modal logic
+    setTimeout(() => {
+        const donationModal = document.getElementById('donationModal');
+        if (donationModal) {
+            donationModal.classList.add('show');
+        }
+    }, 800);
+
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => {
+            const donationModal = document.getElementById('donationModal');
+            if(donationModal) donationModal.classList.remove('show');
+        });
+    }
+
+    const toggleContributorsBtn = document.getElementById('toggleContributorsBtn');
+    if (toggleContributorsBtn) {
+        toggleContributorsBtn.addEventListener('click', () => {
+            const list = document.getElementById('contributorsList');
+            const icon = document.getElementById('contributorsIcon');
+            if (list.style.display === 'none') {
+                list.style.display = 'block';
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            } else {
+                list.style.display = 'none';
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            }
+        });
+    }
+
     const initialState = getCurrentMealState();
     if (!areDatesOnSameDay(new Date(), initialState.targetDate)) {
         userDate = initialState.targetDate;
