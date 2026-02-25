@@ -217,12 +217,29 @@
                 </div>
 
                 <div>
-                    <a href="upi://pay?pa=proadhikary@upi&tn=udaimenu&cu=INR"
-                        class="btn btn-lg w-100 fw-bold rounded-pill shadow-sm text-white"
-                        style="background: linear-gradient(135deg, #ff416c, #ff4b2b); border: none;">
-                        ₹ Donate Now
-                    </a>
-                    <p class="text-muted mt-2 mb-0" style="font-size: 0.75rem;"><i
+                    <div class="d-flex gap-2">
+                        <button type="button"
+                            class="btn w-50 fw-bold rounded-pill shadow-sm text-white d-flex align-items-center justify-content-center"
+                            onclick="document.getElementById('qrCodeContainer').style.display = document.getElementById('qrCodeContainer').style.display === 'none' ? 'block' : 'none'"
+                            style="background: #333; border: none; font-size: 0.95rem;">
+                            <i class="fas fa-qrcode me-2"></i> Show QR
+                        </button>
+                        <a href="upi://pay?pa=proadhikary@upi"
+                            class="btn w-50 fw-bold rounded-pill shadow-sm text-white d-flex align-items-center justify-content-center"
+                            style="background: linear-gradient(135deg, #ff416c, #ff4b2b); border: none; font-size: 0.95rem; text-decoration: none;">
+                            ₹ Donate Now
+                        </a>
+                    </div>
+                    <div id="qrCodeContainer" class="mt-3" style="display: none;">
+                        <div class="card card-body p-2 bg-light align-items-center mx-auto"
+                            style="border-radius: 12px; border: 1px dashed #ccc; width: fit-content;">
+                            <p class="text-muted mb-2 text-center" style="font-size: 0.85rem;">Scan using any UPI App
+                            </p>
+                            <img src="assets/QR.png" alt="UPI QR Code" class="img-fluid rounded bg-white p-1"
+                                style="width: 150px; height: 150px;">
+                        </div>
+                    </div>
+                    <p class="text-muted mt-3 mb-0" style="font-size: 0.75rem;"><i
                             class="fas fa-shield-alt me-1"></i>Secure UPI Payment</p>
                 </div>
             </div>
