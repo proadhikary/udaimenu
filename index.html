@@ -177,16 +177,22 @@
             <div class="donation-card text-center">
                 <button id="closeModalBtn" class="close-btn">&times;</button>
                 <div class="modal-header-icon">
-                    <i class="fas fa-heart text-danger fa-3x mb-3"></i>
+                    <i class="fa-solid fa-heart-crack text-danger fa-3x mb-3"></i>
                 </div>
-                <h3 class="fw-bold mb-2">Support udai.today!</h3>
+                <h3 class="fw-bold mb-2 text-danger">⚠️ URGENT: udai.today Needs You!</h3>
                 <p class="text-muted mb-3" style="font-size: 0.95rem;"><strong>udai.today</strong> has been serving you
                     for almost a year, opened by you 30K+ times!</p>
 
-                <div class="alert alert-warning p-2 mb-4" style="font-size: 0.9rem; border-radius: 12px;">
-                    The web address that everyone loved, <strong>udai.today</strong> is expiring on <strong>March
-                        20th</strong>.<br>Renewal
-                    cost: <strong>₹3999 + tax</strong>.
+                <div class="alert alert-danger p-3 mb-4 text-center shadow"
+                    style="font-size: 0.95rem; border-radius: 12px; border: 2px solid #dc3545;">
+                    <h5 class="fw-bold text-danger mb-2" id="countdownTimer">⏳ Calculating time left...</h5>
+                    <p class="mb-2 text-dark">If money is not collected, <strong>udai.today becomes homeless</strong>.
+                    </p>
+                    <p class="mb-2 text-dark">Please <strong>donate to keep it have its address</strong> before
+                        <strong>March 20th</strong>.
+                    </p>
+                    <span class="text-muted mt-2" style="font-size: 0.85rem;">Renewal cost: <strong>₹3999 +
+                            tax</strong></span>
                 </div>
 
                 <div class="fund-progress mb-3">
@@ -310,6 +316,30 @@
         </div>
 
         <script src="assets/app.js"></script>
+        <script>
+            function updateDonationCountdown() {
+                const countdownEl = document.getElementById('countdownTimer');
+                if (!countdownEl) return;
+
+                const targetDate = new Date('March 20, 2026 00:00:00').getTime();
+                const now = new Date().getTime();
+                const timeLeft = targetDate - now;
+
+                if (timeLeft <= 0) {
+                    countdownEl.innerHTML = "🚨 The deadline has passed!";
+                    return;
+                }
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                countdownEl.innerHTML = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s Left!`;
+            }
+            setInterval(updateDonationCountdown, 1000);
+            updateDonationCountdown();
+        </script>
 </body>
 
 </html>
