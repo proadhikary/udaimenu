@@ -4,7 +4,7 @@
       "monday": "MIX PARATHA, PICKLE, MINT CHATNEY & DAHI, CHOCOS, FRUIT, Butter; Brown Bread; White Bread; Milk; Tea; Coffee; Bournvita; Jam",
       "tuesday": "IDLI / FRIED IDLI, SAMBHAR WITH 2 CHATNEY: COCONUT & TOMATO, KALA CHANA, FRUIT OATS, Butter; Brown Bread; White Bread; Milk; Tea; Coffee; Bournvita; Jam",
       "wednesday": "PANEER PARATHA, DAHI, CHATNEY, CORNFLAKES, SPROUTS, FRUIT, BOILED EGGS, Butter; Brown Bread; White Bread; Milk; Tea; Coffee; Bournvita; Jam",
-      "thursday": "UTTAPAM, SAMBAR, CHUTNEY, MASALA CORN, SPROUTS, CORNFLAKES, FRUITS, Butter; Brown Bread; White Bread; Milk; Tea; Coffee; Bournvita; Jam",
+      "thursday": "Upma, Masala Corn, Mueslli, Sprouts, Fruits, Butter; Brown Bread; White Bread; Milk; Tea; Coffee; Bournvita; Jam",
       "friday": "OMELETTE, POHA & SEV, JALEBI MASALA OATS, SPROUTS, FRUITS, Butter; Brown Bread; White Bread; Milk; Tea; Coffee; Bournvita; Jam",
       "saturday": "BESAN CHILA, NAMKEEN SEVIEN, MUESLI, FRUIT, Butter; Brown Bread; White Bread; Milk; Tea; Coffee; Bournvita; Jam",
       "sunday": "DOSA, SAMBHAR WITH 2 CHUTNEY: COCONUT & TOMATO, CHOCOS, SPROUTS, FRUIT, DALIA, Butter; Brown Bread; White Bread; Milk; Tea; Coffee; Bournvita; Jam"
@@ -15,7 +15,7 @@
       "monday": "RAJMA MASALA, ALOO SHIMLA, RICE, ROTI, SALAD, ROASTED PAPAD, DAHI",
       "tuesday": "MUTTER PANEER, MOONG+MALKA DAL, BOONDI RAITA, SALAD, RICE, ROTI",
       "wednesday": "ALOO GOBI, NOODLES, DAL SABUT, RICE, ROTI, SALAD, DAHI, FRYUMS",
-      "thursday": "KADHI PAKORA, JEERA ALOO, DAL MASOOR BLACK, ROTI, FRIED PAPAD",
+      "thursday": "KADHI PAKORA, JEERA ALOO, DAL MASOOR BLACK, ROTI",
       "friday": "ALOO BHUJIA, RICE, ROTI, DAL MIX, SALAD, DAHI",
       "saturday": "PANEER/EGG BHURJI, DAL CHANA, RICE, ROTI, SALAD, PINEAPPLE RAITA",
       "sunday": "PINDI CHOLE, ALOO CHOKHA, BHATURA, KULCHE, RICE, ROTI, SALAD, DAHI BHALLA"
@@ -55,7 +55,7 @@
       "monday": "VEG / EGG / CHICKEN BIRYANI, KALA CHANA SUBZI, TOMATO PYAAZ RAITA, SWEET, ROTI",
       "tuesday": "AMRITSARI CHOLLE, KADDU MASALA / ALOO TAMATAR, AJWAIN PURI, ROTI, JEERA RICE, SALAD, KHEER, SNACK",
       "wednesday": "SARSON KA SAAG, DAL MOONG + MALKA, MISSI ROTI, GUR, SALAD, SNACK, SOUP",
-      "thursday": "FRIED RICE, MANCHURIAN/CHILLI, PANEER, ROTI, DAL, SALAD, BADAM MILK, SNACKS, SALAD",
+      "thursday": "Pav Bhaji, Dal, Rice, Roti, Fruit Custard, SALAD",
       "friday": "PANEER BUTTER MASALA / CHICKEN CURRY, LACCHA PARATHA, SWEET, DAL MALKA + MOONG, RICE, SALAD",
       "saturday": "ALOO PARATHA, DAHI, PEAS PULAO, DAL TADKA, CHATNEY, BUTTER, ROTI, MASALA CORN, SALAD",
       "sunday": "KADHAI PANEER / PALAK PANEER / EGG CURRY, MOONG + MALKA DAL, RICE, ROTI, SALAD, JUICE, MASALA CORN"
