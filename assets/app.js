@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userDate = initialState.targetDate;
     }
 
-    fetch('assets/menus/may26.json')
+    fetch('assets/menus/summer26.json')
         .then(response => response.json())
         .then(data => {
             menuData = data;
