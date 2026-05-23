@@ -32,13 +32,13 @@
   },
   "snacks": {
     "Meals": {
-      "monday": "NA",
-      "tuesday": "PANEER MOMOS / SPRING ROLL",
-      "wednesday": "KHASTA KACHORI SABZI / CHAT PAPDI",
-      "thursday": "CUSTARD",
-      "friday": "ICE CREAM",
-      "saturday": "JUICE",
-      "sunday": "HONEY CHILI POTATO / VEG KATHI ROLL"
+      "monday": "TEA",
+      "tuesday": "TEA",
+      "wednesday": "TEA",
+      "thursday": "TEA",
+      "friday": "TEA",
+      "saturday": "TEA",
+      "sunday": "TEA"
     },
     "Extra Messing": {
       "monday": "NA",
@@ -53,12 +53,12 @@
   "dinner": {
     "Meals": {
       "monday": "VEG / EGG / CHICKEN BIRYANI, KALA CHANA SUBZI, ROTI, TOMATO PYAAZ RAITA, SWEET",
-      "tuesday": "AMRITSARI CHOLLE, KADDU MASALA / ALOO TAMATAR, AJWAIN PURI, ROTI, JEERA RICE, SALAD, KHEER",
-      "wednesday": "AFGHANI SOYA CHAAP, DAL MAKHANI, RICE, ROTI, SALAD, SWEET SEVIEN",
+      "tuesday": "AMRITSARI CHOLLE, KADDU MASALA / ALOO TAMATAR, AJWAIN PURI, ROTI, JEERA RICE, SALAD, KHEER/MOMOS/ROLL",
+      "wednesday": "AFGHANI SOYA CHAAP, DAL MAKHANI, RICE, ROTI, SALAD, SWEET SEVIEN, KACHORI SABZI/CHAT",
       "thursday": "MALAI KOFTA, LAHSUNI DAL TADKA, RICE, ROTI, SALAD, CUSTARD",
       "friday": "PANEER BUTTER MASALA / CHICKEN CURRY, DAL MALKA + MOONG, RICE, ROTI, SALAD, ICE CREAM",
       "saturday": "MASHROOM DO PYAZA, DAL TADKA, ROTI, SALAD, FRIED RICE, JUICE",
-      "sunday": "PANEER LABABDAR / EGG CURRY, MOONG + MALKA DAL, RICE, ROTI, SALAD"
+      "sunday": "PANEER LABABDAR / EGG CURRY, MOONG + MALKA DAL, RICE, ROTI, SALAD, HONEY CHILI POTATO / KATHI ROLL"
     },
     "Extra Messing": {
       "monday": "NA",
