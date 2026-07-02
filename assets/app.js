@@ -262,7 +262,7 @@ async function getDietitianSuggestion() {
 
     } catch (error) {
         console.error("API Error:", error);
-        responseDiv.innerHTML = `<p class="text-danger">Sorry, I couldn't generate a suggestion right now. Please check the console for errors.</p>`;
+        responseDiv.innerHTML = `<p class="text-danger">Sorry, I couldn't generate a suggestion right now. Contact @proadhikary</p>`;
     } finally {
         suggestionBtn.disabled = false;
         suggestionBtn.innerText = 'Get Suggestion';
