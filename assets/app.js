@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', () => {
             const donationModal = document.getElementById('donationModal');
-            if(donationModal) donationModal.classList.remove('show');
+            if (donationModal) donationModal.classList.remove('show');
         });
     }
 
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userDate = initialState.targetDate;
     }
 
-    fetch('assets/menus/summer26.json')
+    fetch('assets/menus/Aug25.json')
         .then(response => response.json())
         .then(data => {
             menuData = data;
