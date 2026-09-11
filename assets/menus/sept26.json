@@ -1,0 +1,73 @@
+{
+    "breakfast": {
+        "Meals": {
+            "monday": "POHA & SEV, MACARONI, VADA PAV, SPROUTS, MUESLI, FRUIT, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+            "tuesday": "ALOO PYAAZ PRANTHA, DAHI, KALA CHANA, FRUIT, CORNFLAKES, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+            "wednesday": "PAV BHAJI, BREAD PAKORA, CHOCOS, FRUITS, BOILED EGGS, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+            "thursday": "VADA + SAMBHAR, SWEET CORN, FRUITS, MASALA OATS, BOILED EGGS, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+            "friday": "PANEER PARATHA, CURD, CHATNEY, CORNFLAKES, SPROUTS, FRUIT, BOILED EGGS, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+            "saturday": "BESAN CHILA, VEG SANDWICH, NAMKEEN SEVIEN, MUESLI, FRUIT, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+            "sunday": "DOSA, SAMBHAR WITH 2 CHUTNEY, CHOCOS, SPROUTS, FRUIT, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam"
+        }
+    },
+    "lunch": {
+        "Meals": {
+            "monday": "RAJMA MASALA, ALOO SHIMLA, CURD, ROASTED PAPAD, RICE, ROTI, SALAD, ROOH AFZA",
+            "tuesday": "AMRITSARI CHOLLE, SALAD, ALOO TAMATAR, AJWAIN PURI, ROTI, JEERA RICE, BOONDI RAITA, NIMBU PANI",
+            "wednesday": "BHINDI DO PYAZA / DUM ALOO, DAL SABUT, NOODLES, BOONDI RAITA, JAL JEERA, RICE, ROTI, SALAD",
+            "thursday": "KADHI PAKORA, ALOO JEERA, DAL MASOOR BLACK, RICE, ROTI, SALAD, PAPAD, WHITE SAUCE PENNE PASTA",
+            "friday": "MIX VEG, DAL MIX, ROASTED PAPAD, PEAS PULAO, FRESH JUICE, ROTI, CURD, SALAD",
+            "saturday": "PANEER/EGG BHURJI, DAL CHANA + URAD CHILKA, PINEAPPLE RAITA, RICE, ROTI, SALAD",
+            "sunday": "PINDI CHOLE, ALOO CHOKHA, BHATURA, KULCHE, RICE, ROTI, SALAD, DAHI BHALLA"
+        },
+        "Extra Messing": {
+            "monday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+            "tuesday": "NA",
+            "wednesday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+            "thursday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+            "friday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+            "saturday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+            "sunday": "NA"
+        }
+    },
+    "snacks": {
+        "Meals": {
+            "monday": "Tea, Bread",
+            "tuesday": "Tea + Coffee, Bread",
+            "wednesday": "Tea, Bread",
+            "thursday": "Tea, Bread",
+            "friday": "Tea, Bread",
+            "saturday": "Tea + Coffee, Bread",
+            "sunday": "Tea, Bread"
+        },
+        "Extra Messing": {
+            "monday": "SAMOSA @ RS 12 COUPON",
+            "tuesday": "SAMOSA @ RS 12 COUPON",
+            "wednesday": "SAMOSA @ RS 12 COUPON",
+            "thursday": "SAMOSA @ RS 12 COUPON",
+            "friday": "SAMOSA @ RS 12 COUPON",
+            "saturday": "SAMOSA @ RS 12 COUPON",
+            "sunday": "NA"
+        }
+    },
+    "dinner": {
+        "Meals": {
+            "monday": "VEG / CHICKEN BIRYANI, KALA CHANA SUBZI, ROTI, TOMATO PYAAZ RAITA, SWEET",
+            "tuesday": "MUTTER PANEER, MOONG + MALKA DAL, KHEER, SNACK, RICE, ROTI, SALAD",
+            "wednesday": "ALOO SOYA CHUNKS, DAL MAKHANI, RICE, ROTI, SALAD, SWEET",
+            "thursday": "MUNCHURIAN / CHILLI PANEER, LAHSUNI DAL TADKA, FRIED RICE, ROTI, SALAD, CUSTARD",
+            "friday": "PANEER BUTTER MASALA / CHICKEN CURRY, DAL MALKA + MOONG, RICE, ROTI, SALAD, SWEET, SNACK, COLD DRINKS",
+            "saturday": "MASHROOM DO PYAZA, DAL TADKA, ROTI, SALAD, FRIED RICE, SNACK",
+            "sunday": "KADHAI PANEER / EGG CURRY, MOONG + MALKA DAL, RICE, ROTI, SALAD, DESI GHEE SUJI HALWA"
+        },
+        "Extra Messing": {
+            "monday": "NA",
+            "tuesday": "NA",
+            "wednesday": "NA",
+            "thursday": "NA",
+            "friday": "NA",
+            "saturday": "NA",
+            "sunday": "NA"
+        }
+    }
+}
