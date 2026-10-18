@@ -8,7 +8,9 @@ exports.handler = async function (event) {
 
   // Get the secret API key from the Netlify environment variable
   const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
+  // Model can be overridden via the GEMINI_MODEL env var when Google retires this one
+  const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
+  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
   try {
     // Get the prompt sent from the frontend
@@ -36,7 +38,13 @@ exports.handler = async function (event) {
     }
 
     const data = await response.json();
-    const aiText = data.candidates[0].content.parts[0].text;
+    // Newer models may split output into multiple parts (incl. thought parts)
+    const parts = data.candidates?.[0]?.content?.parts || [];
+    const aiText = parts.filter(p => p.text && !p.thought).map(p => p.text).join('');
+
+    if (!aiText) {
+      return { statusCode: 502, body: JSON.stringify({ error: 'Empty response from model' }) };
+    }
 
     // Send the AI's response back to the frontend
     return {
