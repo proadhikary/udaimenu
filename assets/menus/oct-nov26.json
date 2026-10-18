@@ -1,0 +1,73 @@
+{
+  "breakfast": {
+    "Meals": {
+      "monday": "POHA & SEV, MACARONI, VADA PAV, OMELETTE, MUESLI, FRUIT, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+      "tuesday": "ALOO PYAAZ PRANTHA, DAHI, SWEET CORN, FRUIT, CORNFLAKES, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+      "wednesday": "PAV BHAJI, BREAD PAKORA, KALA CHANA, CHOCOS, FRUITS, BOILED EGGS, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+      "thursday": "VEG + FRIED IDLI, SAMBHAR, MUESLI, FRUITS, MASALA OATS, BOILED EGGS, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+      "friday": "PANEER PARATHA, CURD, CHATNEY, CORNFLAKES, SPROUTS, FRUIT, BOILED EGGS, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+      "saturday": "MOONG DAL CHILLA, VEG SANDWICH, NAMKEEN SEVIEN, MUESLI, FRUIT, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam",
+      "sunday": "DOSA, SAMBHAR WITH 2 CHUTNEY, CHOCOS, SPROUTS, FRUIT, Butter; Brown Bread; White Bread; Hot and Cold Milk; Tea; Coffee; Bournvita; Jam"
+    }
+  },
+  "lunch": {
+    "Meals": {
+      "monday": "RAJMA MASALA, ALOO SHIMLA, CURD, ROASTED PAPAD, RICE, ROTI, SALAD, ROOH AFZA",
+      "tuesday": "AMRITSARI CHOLLE, SALAD, ALOO TAMATAR, AJWAIN PURI, ROTI, JEERA RICE, BOONDI RAITA, NIMBU PANI",
+      "wednesday": "ALOO GOBHI / ALOO METHI, DAL SABUT, NOODLES, CUCUMBER RAITA, JAL JEERA, RICE, ROTI, SALAD",
+      "thursday": "KADHI PAKORA, ALOO JEERA, DAL MASOOR BLACK, RICE, ROTI, SALAD, PAPAD, WHITE SAUCE PENNE PASTA",
+      "friday": "MIX VEG, DAL MIX, FRYUMS, PEAS PULAO, FRESH JUICE, ROTI, CURD, SALAD",
+      "saturday": "PANEER/EGG BHURJI, DAL CHANA + URAD CHILKA, PINEAPPLE RAITA, RICE, ROTI, SALAD",
+      "sunday": "PINDI CHOLE, ALOO CHOKHA, BHATURA, KULCHE, RICE, ROTI, SALAD, DAHI BHALLA"
+    },
+    "Extra Messing": {
+      "monday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+      "tuesday": "NA",
+      "wednesday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+      "thursday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+      "friday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+      "saturday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS",
+      "sunday": "EXTRA MESSING AVAILABLE DURING LUNCH HOURS"
+    }
+  },
+  "snacks": {
+    "Meals": {
+      "monday": "Tea, Bread",
+      "tuesday": "Tea + Coffee, Bread",
+      "wednesday": "Tea, Bread",
+      "thursday": "Coffee, Bread",
+      "friday": "Tea, Bread",
+      "saturday": "Tea + Coffee, Bread",
+      "sunday": "Tea, Bread"
+    },
+    "Extra Messing": {
+      "monday": "SAMOSA @ RS 12 COUPON",
+      "tuesday": "SAMOSA @ RS 12 COUPON",
+      "wednesday": "SAMOSA @ RS 12 COUPON",
+      "thursday": "SAMOSA @ RS 12 COUPON",
+      "friday": "SAMOSA @ RS 12 COUPON",
+      "saturday": "SAMOSA @ RS 12 COUPON",
+      "sunday": "NA"
+    }
+  },
+  "dinner": {
+    "Meals": {
+      "monday": "VEG / CHICKEN BIRYANI, KALA CHANA SUBZI, ROTI, TOMATO PYAAZ RAITA, SWEET",
+      "tuesday": "PALAK PANEER, MOONG + MALKA DAL, KHEER, SNACK, RICE, ROTI, SALAD",
+      "wednesday": "MIX PARANTHA, DAHI, DAL TADKA, RICE, ROTI, CHUTNEY, SALAD, SWEET",
+      "thursday": "MUNCHURIAN / CHILLI PANEER, LAHSUNI DAL TADKA, FRIED RICE, ROTI, SALAD, CUSTARD",
+      "friday": "HANDI PANEER / CHICKEN CURRY, DAL MALKA + MOONG, RICE, ROTI, SALAD, SWEET, SNACK, COLD DRINKS",
+      "saturday": "BAINGAN BHARTA, DAL MAKHNI, ROTI, SALAD, FRIED RICE, SNACK",
+      "sunday": "KADHAI PANEER / EGG CURRY, MOONG + MALKA DAL, RICE, ROTI, SALAD, DESI GHEE SUJI HALWA"
+    },
+    "Extra Messing": {
+      "monday": "NA",
+      "tuesday": "NA",
+      "wednesday": "NA",
+      "thursday": "NA",
+      "friday": "NA",
+      "saturday": "NA",
+      "sunday": "NA"
+    }
+  }
+}
